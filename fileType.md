@@ -3,7 +3,7 @@
 ## `{spriteName}.fnfsp` (It's called FNFSprite.)
  This is a Sprite Data included Zip Format
 ### Contents included in the file
-* `AnimData.json`
+* `animData.json`
 * `partsMap.json`
 * `partsMap.png`
 

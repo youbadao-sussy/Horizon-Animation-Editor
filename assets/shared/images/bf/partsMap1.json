@@ -1,0 +1,12 @@
+{
+    "TYPE": "HorizonAtlas",
+    "SPRITE": [
+        {"N": "partsName","S": {"X": 32,"Y": 0,"W": 32,"H": 32},"V": {"X": 0,"Y": 0}}
+    ],
+    "META": {
+        "version": "1.0.0",
+        "image": "partsMap1.png",
+        "size": [64, 32],
+        "generatedBy": "Horizon Animation Editor"
+    }
+}

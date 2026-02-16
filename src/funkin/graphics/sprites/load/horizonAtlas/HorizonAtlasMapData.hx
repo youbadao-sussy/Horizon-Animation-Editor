@@ -1,21 +1,21 @@
 package funkin.graphics.sprites.load.horizonAtlas;
 
-typedef Metadata =
+typedef MapDataMain =
 {
   @:alias("TYPE") var type:String;
   @:alias("SPRITE") var sprites:Array<SpriteMapData>;
-  @:alias("META") var meta:ExportInfo;
+	@:alias("META") var meta:ExportMeta;
 }
 
 typedef SpriteMapData =
 {
+  @:alias("N") var name:String;
   @:alias("S") var sprite:SpriteData;
   @:alias("V") var vertex:VertexData;
 }
 
 typedef SpriteData =
 {
-  @:alias("N") var name:String;
   @:alias("X") var x:Float;
   @:alias("Y") var y:Float;
   @:alias("W") var width:Float;
@@ -29,10 +29,10 @@ typedef VertexData =
   @:alias("D") var deform:Array<Float>;
 }
 
-typedef ExportInfo =
+typedef ExportMeta =
 {
-  var generatedBy:String;
   var version:String;
   var image:String;
   var size:Array<Int>;
+  var generatedBy:String;
 }

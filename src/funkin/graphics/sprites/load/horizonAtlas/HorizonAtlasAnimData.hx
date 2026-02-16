@@ -3,26 +3,22 @@ package funkin.graphics.sprites.load.horizonAtlas;
 typedef AnimDataMain =
 {
   var anim:Array<AnimationMetadata>;
-  var animater:String;
+	var animator:String;
   var generatedBy:String;
 }
 
 typedef AnimationMetadata =
 {
   @:alias("N") var assetName:String;
-  @:alias("AN") var animation:Array<AnimInfoData>;
+	@:alias("AN") var animations:Array<AnimInfoData>;
 }
 
 typedef AnimInfoData =
 {
-  @:alias("N") var animName:String;
-  @:alias("PF") var partsFrameData:Array<AnimFrameData>;
-}
-
-typedef AnimFrameData =
-{
+	@:alias("N") var animName:String;
+	@:alias("AP") var assetPath:String;
   @:alias("F") var frame:Int;
-  @:alias("PA") var partsAnimation:Array<AnimPartsData>;
+	@:alias("PA") var partsAnimation:Array<AnimPartsData>;
 }
 
 typedef AnimPartsData =

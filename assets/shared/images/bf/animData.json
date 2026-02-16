@@ -1,0 +1,24 @@
+{
+    "anim": [
+        {
+            "N": "Boyfriend Assets",
+            "AN": [
+                {
+                    "N": "Idle",
+                    "AP": "partsMap1",
+                    "F": 24,
+                    "PA":[
+                        {
+                            "N": "partsName",
+                            "Z": 0,
+                            "O": [0, 0],
+                            "A": 0,
+                            "SA": 1,
+                            "DAO": [0, 0]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
