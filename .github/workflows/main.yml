@@ -20,8 +20,8 @@ jobs:
           key: cache-build-windows
           path: |
             .haxelib/
-            build/flixel/release/windows/haxe/
-            build/flixel/release/windows/obj/
+            build/flixel/windows/haxe/
+            build/flixel/windows/obj/
           restore-keys: |
             cache-build-windows
       - name: Install Haxelib
@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.4
         with:
           name: Funkin' HorizonAnimEditor-Windows
-          path: build/flixel/release/windows/bin
+          path: build/flixel/windows/bin
           retention-days: 3
       - name: Uploading new cache
         uses: actions/cache@main
@@ -49,7 +49,7 @@ jobs:
           key: cache-build-windows
           path: |
             .haxelib/
-            build/flixel/release/windows/haxe/
-            build/flixel/release/windows/obj/
+            build/flixel/windows/haxe/
+            build/flixel/windows/obj/
           restore-keys: |
             cache-build-windows
