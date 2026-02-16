@@ -33,6 +33,10 @@
 	<classpath name="src" />
 	<assets path="assets" include="*" />
 	
+	<!-- __________________________ DEFINE SETTINGS __________________________-->
+
+	 <!-- <define name="haxeui_dont_impose_base_class" /> -->
+	
 	<!-- __________________________LIBRARIES __________________________-->
 		
 	<haxelib name="flixel" />
