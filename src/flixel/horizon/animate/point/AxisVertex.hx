@@ -1,6 +1,6 @@
-package;
+package flixel.horizon.animate.point;
 
-class Vertex {
+class AxisVertex {
     public var x:Float;
     public var y:Float;
     
