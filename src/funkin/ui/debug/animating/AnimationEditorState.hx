@@ -1,10 +1,10 @@
 package funkin.ui.debug.animating;
 
-import haxe.ui.containers.VBox;
+import haxe.ui.backend.flixel.UIState;
 import haxe.ui.events.MouseEvent;
 
 @:build(haxe.ui.ComponentBuilder.build("assets/exclude/data/ui/animation-editor/main-view.xml"))
-class AnimationEditor extends VBox {
+class AnimationEditorState extends UIState {
     public function new() {
         super();
         button1.onClick = function(e) {
