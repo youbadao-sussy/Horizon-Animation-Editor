@@ -3,7 +3,7 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<app title="Horizon Animation Editor" package="com.youbadao.horizonengine.animeditor" file="Main" main="Main" version="1.0.0" company="" />
+	<app title="Horizon Animation Editor" package="com.youbadao.horizonengine.animeditor" file="Main" main="Main" version="1.0.0" company="Youbadao" />
 	
 	<!--The flixel preloader is not accurate in Chrome. You can use it regualary if you embed the swf into a html file, or you can set the actual size of your file manually at "Flxpreloader-onUpdate-bytesTotal"!-->
 	<app preloader="flixel.system.FlxPreloader" />
@@ -32,6 +32,9 @@
 	<set name="BUILD_DIR" value="build/flixel" />
 	<classpath name="src" />
 	<assets path="assets" include="*" />
+	
+	<!-- __________________________ Assets SETTINGS __________________________-->
+	<assets path='fileType.md' embed="true" />
 	
 	<!-- __________________________ DEFINE SETTINGS __________________________-->
 

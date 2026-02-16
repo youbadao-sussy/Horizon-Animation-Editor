@@ -18,6 +18,6 @@ class MainView extends VBox {
     
     @:bind(button2, MouseEvent.CLICK)
     private function onMyButton(e:MouseEvent) {
-		button2.text = "File";
+		button2.text = "Please Select to File";
     }
 }
