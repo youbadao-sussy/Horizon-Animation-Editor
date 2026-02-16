@@ -10,7 +10,7 @@ haxelib install flixel 6.1.2
 haxelib install flixel-addons 4.0.1
 haxelib install flixel-tools 1.5.1
 haxelib install haxeui-core 1.7.0
-haxelib install haxeui-flixel 1.7.0
+haxelib git haxeui-flixel https://github.com/youbadao-sussy/haxeui-flixel/tree/master
 haxelib install tjson 1.4.0
 haxelib install hxdiscord_rpc 1.3.0
 haxelib install thx.core 0.44.0
