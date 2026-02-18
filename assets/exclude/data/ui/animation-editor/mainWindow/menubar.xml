@@ -1,0 +1,116 @@
+
+    <menubar width="100%">
+        <menu text="Normal">
+            <menuitem text="Item 1" shortcutText="Shortcut" />
+            <menuitem text="Item 2 (disabled)" disabled="true" shortcutText="Ctrl+A" />
+            <menu text="Sub Menu">
+                <menuitem text="Item 1" />
+                <menuitem text="Item 2" />
+                <menuitem text="Item 3" />
+                <menuseparator />
+                <menucheckbox text="Item 4" selected="true" />
+                <menucheckbox text="Item 5" />
+                <menucheckbox text="Item 6" selected="true" />
+                <menuseparator />
+                <menucheckbox text="Item 7" selected="true" />
+            </menu>
+            <menuitem text="Item 3" shortcutText="Ctrl+B" />
+            <menuitem text="Item 4" shortcutText="Ctrl+C" />
+            <menuseparator />
+            <menuitem text="Item 5" shortcutText="Ctrl+D" />
+        </menu>
+
+        <menu text="Any Content #1">
+            <vbox width="100%">
+                <listview id="lv2" width="100%" height="150" selectedIndex="1" style="border:none;">
+                    <item-renderer layout="horizontal" width="100%">
+                        <checkbox id="complete" />
+                        <label width="100%" id="item" />
+                        <image id="image" />
+                    </item-renderer>
+                    <data>
+                        <item complete="false" item="Item 1"/>
+                    </data>
+                </listview>
+            </vbox>     
+        </menu>    
+
+        <menu text="Any Content #2">
+            <vbox width="100%">
+                <property-grid id="pg" width="100%" height="300" style="border:none;">
+                    <property-group text="Primary Group">
+                        <property id="stringProp" label="String Property" value="Value 1" />
+                        <property id="boolProp" label="Bool Property" type="boolean" value="true" />
+                        <property id="intProp" label="Int Property" type="int" value="101" />
+                        <property id="listProp" label="List Property" type="list" value="Item 1">
+                            <data>
+                                <item text="Item 1" />
+                                <item text="Item 2" />
+                                <item text="Item 3" />
+                                <item text="Item 4" />
+                                <item text="Item 5" />
+                                <item text="Item 6" />
+                            </data>
+                        </property>    
+                    </property-group>
+                    
+                    <property-group text="Secondary Group">
+                        <property label="String Property" value="Value 2" />
+                        <property label="Bool Property" type="boolean" value="false" />
+                        <property label="Int Property" type="int" value="102" />
+                        <property label="List Property" type="list" value="Item 2">
+                            <data>
+                                <item text="Item 1" />
+                                <item text="Item 2" />
+                                <item text="Item 3" />
+                                <item text="Item 4" />
+                                <item text="Item 5" />
+                                <item text="Item 6" />
+                            </data>
+                        </property>    
+                    </property-group>
+                    
+                    <property-group text="Tertiary Group">
+                        <property label="String Property" value="Value 3" />
+                        <property label="Bool Property" type="boolean" value="true" />
+                        <property label="Int Property" type="int" value="103" />
+                        <property label="List Property" type="list" value="Item 3">
+                            <data>
+                                <item text="Item 1" />
+                                <item text="Item 2" />
+                                <item text="Item 3" />
+                                <item text="Item 4" />
+                                <item text="Item 5" />
+                                <item text="Item 6" />
+                            </data>
+                        </property>    
+                    </property-group>
+                </property-grid>
+            </vbox>     
+        </menu>    
+        
+        <menu text="Any Content #3">
+            <vbox width="100%" style="padding: 5px;">
+                <slider width="100%" majorTicks="10" minorTicks="5" pos="70" />
+                <slider width="100%" majorTicks="10" minorTicks="5" pos="20" />
+                <slider width="100%" majorTicks="10" minorTicks="5" pos="50" />
+                <spacer height="5" />
+                <button-bar selectedIndex="1" width="100%">
+                    <button text="A" width="33%" />
+                    <button text="B" width="34%" />
+                    <button text="C" width="33%" />
+                </button-bar>
+            </vbox>
+        </menu>    
+        
+        <spacer width="100%" />
+        
+        <button text="A Button" />
+        <menu text="Help">
+            <menuitem text="Item 1" />
+            <menuitem text="Item 2" />
+            <menuitem text="Item 3" />
+            <menuitem text="Item 4" />
+            <menuitem text="Item 5" />
+        </menu>
+    </menubar>

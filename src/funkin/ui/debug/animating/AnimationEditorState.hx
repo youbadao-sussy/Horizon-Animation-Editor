@@ -6,6 +6,7 @@ import haxe.ui.events.MouseEvent;
 
 @:build(haxe.ui.ComponentBuilder.build("assets/exclude/data/ui/animation-editor/main-view.xml"))
 class AnimationEditorState extends VBox {
+	/*
     public function new() {
         super();
         button1.onClick = function(e) {
@@ -17,4 +18,5 @@ class AnimationEditorState extends VBox {
     private function onMyButton(e:MouseEvent) {
         button2.text = "Thanks!";
     }
+	 */
 }
