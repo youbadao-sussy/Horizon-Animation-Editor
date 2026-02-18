@@ -6,6 +6,5 @@ import openfl.display.Sprite;
 
 class HorizonObject
 {
-    var buffer:BitmapData;
-    var buffer:BitmapData;
+	var buffer:BitmapData;
 }
