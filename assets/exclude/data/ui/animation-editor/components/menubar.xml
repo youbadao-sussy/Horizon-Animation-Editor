@@ -20,7 +20,7 @@
             <menuitem text="Item 5" shortcutText="Ctrl+D" />
         </menu>
 
-        <menu text="Any Content #1">
+        <menu text="File">
             <vbox width="100%">
                 <listview id="lv2" width="100%" height="150" selectedIndex="1" style="border:none;">
                     <item-renderer layout="horizontal" width="100%">
@@ -35,8 +35,13 @@
             </vbox>     
         </menu>    
 
-        <menu text="Any Content #2">
+        <menu text="View">
             <vbox width="100%">
+                <menu text="Theme">
+                    <optionbox text="Light" selected="true" onchange="util.Logger.log(this.text + ' changed')" />
+                    <optionbox text="Dark" disabled="true" />
+                    <!-- <optionbox text="Dark" onchange="util.Logger.log(this.text + ' changed')" /> -->
+                </menu>
                 <property-grid id="pg" width="100%" height="300" style="border:none;">
                     <property-group text="Primary Group">
                         <property id="stringProp" label="String Property" value="Value 1" />
