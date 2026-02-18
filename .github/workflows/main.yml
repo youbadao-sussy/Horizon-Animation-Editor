@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  checkout-and-haxe-set:
+  checkout:
     strategy:
       matrix:
         os: [windows-latest]
@@ -15,13 +15,9 @@ jobs:
     steps:
       # リポジトリを$GITHUB_WORKSPACEでチェックアウトし、ジョブがアクセスできるようにします。
       - uses: actions/checkout@v4.1.7
-
-      - uses: krdlab/setup-haxe@master
-        with:
-          haxe-version: 4.3.7
       # Runs a set of commands using the runners shell
   setup-haxelib:
-    needs: checkout-and-haxe-set
+    needs: checkout
     strategy:
       matrix:
         include: 
@@ -30,6 +26,9 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
 
     steps:
+      - uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
       - name: Windows Install Haxelib
         if: ${{ matrix.target == 'windows' }}
         run: |
