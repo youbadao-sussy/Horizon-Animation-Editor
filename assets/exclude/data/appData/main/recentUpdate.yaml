@@ -1,0 +1,14 @@
+news-header: Recent Updates
+h1: Version 1.0.0 Released!
+h2:
+h3:
+news:
+  - title: Version 1.0.0 Released!
+    version: 1.0.0
+    date: "20??-??-??"
+    description: |
+      We are excited to announce the release of Horizon Animation Editor version 1.0.0!
+      This milestone marks the culmination of months of hard work and dedication.
+      The new version includes a revamped user interface, improved performance,
+      and a host of new features designed to enhance your animation creation experience.
+      We can't wait for you to try it out and see the amazing animations you create with it!

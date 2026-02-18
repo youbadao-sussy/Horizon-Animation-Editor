@@ -16,6 +16,7 @@ haxelib install hxdiscord_rpc 1.3.0
 haxelib install thx.core 0.44.0
 haxelib install thx.semver 0.2.2
 haxelib install tink_core 2.1.1
+haxelib install yaml 2.0.1
 haxelib set lime 8.3.0
 haxelib set openfl 9.5.0
 echo Finished!
