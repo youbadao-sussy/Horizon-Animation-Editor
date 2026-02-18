@@ -21,6 +21,7 @@ jobs:
           haxe-version: 4.3.7
       # Runs a set of commands using the runners shell
   setup-haxelib:
+    needs: checkout-and-haxe-set
     strategy:
       matrix:
         include: 
@@ -41,6 +42,7 @@ jobs:
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> %USERPROFILE%/settings.cocoa
         shell: cmd
   build:
+    needs: setup-haxelib
     strategy:
       matrix:
         os: [windows]
