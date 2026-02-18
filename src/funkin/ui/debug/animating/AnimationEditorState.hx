@@ -48,7 +48,7 @@ class AnimationEditorState extends VBox {
 		var data = Yaml.read("assets/exclude/data/appData/main/about.yaml", Parser.options().useObjects());
 
 		Dialogs.messageBox(data.app + '\nVersion: ' + data.version + '\nPlatform: ' + data.platform + '\n' + '\nBuilt by: ' + data.created_by
-			+ '\nHaxeUI by: ' + data.haxeui + '\n\nnote' + data.description,
+			+ '\nHaxeUI by: ' + data.haxeui + '\n\nNOTE: ' + data.description,
 			'About...', 'info');
 		#end
 	}
