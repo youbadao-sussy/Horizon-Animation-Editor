@@ -1,5 +1,16 @@
 package flixel.horizon.animate;
 
+import flixel.FlxG;
+import flixel.math.FlxMatrix;
+import flixel.util.FlxColor;
+import haxe.ds.Vector;
+import openfl.display.BlendMode;
+import openfl.filters.BitmapFilter;
+import openfl.filters.BitmapFilterType;
+import openfl.filters.BlurFilter;
+import openfl.filters.DropShadowFilter;
+import openfl.filters.GlowFilter;
+
 extern typedef HrzAtlasMapDataMain = {
 	atlas:{
 		SPRITES:Array<SpriteMapData>
@@ -8,10 +19,10 @@ extern typedef HrzAtlasMapDataMain = {
 }
 
 extern typedef ExportMeta = {
-	version:String;
-	image:String;
-	size:{w:Int, h:Int};
-	generatedBy:String;
+	version:String,
+	image:String,
+	size:{w:Int, h:Int},
+	generatedBy:String
 }
 
 extern typedef SpriteMapData = {
@@ -38,14 +49,16 @@ extern typedef DeformVertexData = {
 extern abstract AnimationMain(Dynamic)
 {
 	public var AN(get, never):AnimationDataInfo; // animationData
-	public var SD(get, never):Null< #if flash Array<SymbolJson> #else Vector<SymbolJson> #end>;
+	// public var SD(get, never):Null< #if flash Array<SymbolJson> #else Vector<SymbolJson> #end>;
 	public var MD(get, never):AnimationMetadata;
 
 	inline function get_AN()
 		return this.AN ?? this.ANIMATION;
 
+	/*
 	inline function get_SD()
 		return this.SD?.S ?? this.SYMBOL_DICTIONARY?.Symbols;
+	*/
 
 	inline function get_MD()
 		return this.MD ?? this.metadata;

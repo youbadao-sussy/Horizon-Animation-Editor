@@ -17,6 +17,6 @@ import openfl.geom.Matrix;
 
 using flixel.util.FlxColorTransformUtil;
 
-class FlxHrzAnimate extends FlxSprite {
+class HorizonAnimate extends FlxSprite {
     
 }
