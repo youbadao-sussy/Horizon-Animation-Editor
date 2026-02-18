@@ -1,0 +1,9 @@
+name: Question
+description: Ask about something here.
+labels: [question]
+body:
+  - type: textarea
+    attributes:
+      label: Question Description / 質問の内容を記入してください
+    validations:
+      required: true
