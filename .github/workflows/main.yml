@@ -1,55 +1,58 @@
-name: Build
+name: Application Test Build
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  buildWindows:
-    runs-on: windows-latest
+  checkout-and-haxe-set:
+    strategy:
+      matrix:
+        os: [windows-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # リポジトリを$GITHUB_WORKSPACEでチェックアウトし、ジョブがアクセスできるようにします。
       - uses: actions/checkout@v4.1.7
+
       - uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.3.7
       # Runs a set of commands using the runners shell
-      - name: Restore Cache
-        uses: actions/cache@main
-        with:
-          key: cache-build-windows
-          path: |
-            .haxelib/
-            build/flixel/release/windows/haxe/
-            build/flixel/release/windows/obj/
-          restore-keys: |
-            cache-build-windows
-      - name: Install Haxelib
+  setup-haxelib:
+    strategy:
+      matrix:
+        include: 
+          - target: windows
+            runs-on: windows-latest
+    runs-on: ${{ matrix.runs-on }}
+
+    steps:
+      - name: Windows Install Haxelib
+        if: ${{ matrix.target == 'windows' }}
         run: |
           haxelib setup C:/haxelib
           haxelib install hxcpp > /dev/null --quiet
           .\"setup/windows.bat"
         shell: cmd
       - name: Skip SScript setup mode
+        if: ${{ matrix.target == 'windows' }}
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> %USERPROFILE%/settings.cocoa
         shell: cmd
+  build:
+    strategy:
+      matrix:
+        os: [windows]
+    runs-on: ${{ matrix.runs-on }}
+    steps:
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build windows --app-version="4.0.0-${{ github.run_id}}"  -D officialBuild
+        run: haxelib run lime build ${{ matrix.os }} --app-version="4.0.0-${{ github.run_id}}"  -D officialBuild
       - name: Publish Artifact
         uses: actions/upload-artifact@v4.3.4
         with:
-          name: Funkin' HorizonAnimEditor-Windows
-          path: build/flixel/windows/bin
+          name: Funkin' HorizonAnimEditor-${{ matrix.os }}
+          path: build/flixel/release/${{ matrix.os }}/bin
           retention-days: 3
-      - name: Uploading new cache
-        uses: actions/cache@main
-        with:
-          key: cache-build-windows
-          path: |
-            .haxelib/
-            build/flixel/release/windows/haxe/
-            build/flixel/release/windows/obj/
-          restore-keys: |
-            cache-build-windows
