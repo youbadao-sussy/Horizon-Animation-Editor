@@ -45,7 +45,7 @@ class AnimationEditorState extends VBox {
 	}
 	static function messageYee() {
 		#if sys
-		var data:AnyObjectMap = Yaml.read("assets/exclude/data/appData/main/about.yaml", Parser.options().useObjects());
+		var data = Yaml.read("assets/exclude/data/appData/main/about.yaml", Parser.options().useObjects());
 
 		Dialogs.messageBox(data.app + '\nVersion: ' + data.version + '\nPlatform: ' + data.platform + '\n' + '\nBuilt by: ' + data.created_by
 			+ '\nHaxeUI by: ' + data.haxeui + '\n\nnote' + data.description,
