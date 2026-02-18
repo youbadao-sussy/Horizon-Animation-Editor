@@ -29,7 +29,8 @@
 	<!-- __________________________PATHS SETTINGS __________________________-->
 	
 	<set name="no-custom-backend" />
-	<set name="BUILD_DIR" value="build/flixel" />
+	<set name="BUILD_DIR" value="build/flixel/debug" if="debug" />
+	<set name="BUILD_DIR" value="build/flixel/release" unless="debug" />
 	<classpath name="src" />
 	<assets path="assets" include="*" />
 	

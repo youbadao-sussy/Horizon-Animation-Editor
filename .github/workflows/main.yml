@@ -20,8 +20,8 @@ jobs:
           key: cache-build-windows
           path: |
             .haxelib/
-            build/flixel/windows/haxe/
-            build/flixel/windows/obj/
+            build/flixel/release/windows/haxe/
+            build/flixel/release/windows/obj/
           restore-keys: |
             cache-build-windows
       - name: Install Haxelib
@@ -49,7 +49,7 @@ jobs:
           key: cache-build-windows
           path: |
             .haxelib/
-            build/flixel/windows/haxe/
-            build/flixel/windows/obj/
+            build/flixel/release/windows/haxe/
+            build/flixel/release/windows/obj/
           restore-keys: |
             cache-build-windows
