@@ -8,3 +8,17 @@ body:
       label: Bug Description
     validations:
       required: true
+      
+  - type: dropdown
+    id: btarget
+    attributes:
+      label: "What is your build target?"
+      options:
+        - "Windows"
+        - "Linux"
+        - "Mac"
+        - "HTML5"
+        - "Flash/Air-based target"
+        - "Neko, HashLink, or other build system"
+    validations:
+      required: true
