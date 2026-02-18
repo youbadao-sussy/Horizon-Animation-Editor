@@ -112,7 +112,7 @@
         
         <button text="A Button" />
         <menu text="Help">
-            <menuitem text="Item 1" />
+            <menuitem text="About..." id="help1" />
             <menuitem text="Item 2" />
             <menuitem text="Item 3" />
             <menuitem text="Item 4" />

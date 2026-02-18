@@ -1,0 +1,11 @@
+user-name:
+  label: Enter your username
+  default: guest
+
+language:
+  label: Select your language
+  options:
+    - English
+    - Japanese
+  required: true
+

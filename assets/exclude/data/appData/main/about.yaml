@@ -1,4 +1,4 @@
-app-name: Horizon Animation Editor
+app: Horizon Animation Editor
 version: 0.1.0
 platform: Windows, macOS, Linux # 予定
 created-by: Youbadao
@@ -7,6 +7,7 @@ description: |
   Designed to streamline the animation creation process for game developers and artists.
   With an intuitive interface and robust features,
   it allows users to create, edit, and export animations efficiently.
+haxeui: Ian Harrigan
 # Funkin' Horizon Engine向けにHaxeとOpenFLで構築された強力なアニメーションエディタ。
 # ゲーム開発者やアーティストのアニメーション制作プロセスを効率化するために設計されています。
 # 直感的なインターフェースと堅牢な機能を備え、

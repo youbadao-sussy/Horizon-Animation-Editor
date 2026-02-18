@@ -1,0 +1,9 @@
+new-project:
+  label: Project Name (followed to .hsd, .fnfsp, etc.)
+  default: My New Sprite
+
+select-type:
+  label: Select the animation type
+  options:
+    - Humane Character Animation
+    - Friday Night Funkin' Character Animation
