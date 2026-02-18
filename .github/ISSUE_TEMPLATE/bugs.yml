@@ -2,17 +2,10 @@ name: Bug Report
 description: Create a bug report to help us improve.
 labels: [bug]
 body:
-  - type: textarea
-    id: bug-description
-    attributes:
-      label: Bug Description
-    validations:
-      required: true
-      
   - type: dropdown
-    id: btarget
+    id: platform
     attributes:
-      label: "What is your build target?"
+      label: "Application Target Platform / プラットフォームを選択してください"
       options:
         - "Windows"
         - "Linux"
@@ -20,5 +13,12 @@ body:
         - "HTML5"
         - "Flash/Air-based target"
         - "Neko, HashLink, or other build system"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description / バグの詳細を説明してください
     validations:
       required: true
