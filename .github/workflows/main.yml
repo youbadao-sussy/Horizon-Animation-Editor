@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup-haxelib:
+  build-apply:
     strategy:
       matrix:
         include: 
