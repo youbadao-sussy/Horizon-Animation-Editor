@@ -38,7 +38,7 @@
         <menu text="View">
             <vbox width="100%">
                 <menu text="Theme">
-                    <optionbox text="Light" selected="true" onchange="util.Logger.log(this.text + ' changed')" />
+                    <optionbox text="Light" selected="true"/>
                     <optionbox text="Dark" disabled="true" />
                     <!-- <optionbox text="Dark" onchange="util.Logger.log(this.text + ' changed')" /> -->
                 </menu>
