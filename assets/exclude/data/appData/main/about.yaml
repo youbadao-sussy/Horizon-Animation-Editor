@@ -1,7 +1,7 @@
 app: Horizon Animation Editor
 version: 0.1.0
 platform: Windows, macOS, Linux # 予定
-created-by: Youbadao
+created_by: Youbadao
 description: |
   A powerful animation editor built using Haxe and OpenFL for the Funkin' Horizon Engine.
   Designed to streamline the animation creation process for game developers and artists.
