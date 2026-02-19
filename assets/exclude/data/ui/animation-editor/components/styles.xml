@@ -1,0 +1,14 @@
+<box width="0" height="0" padding="0" x="-9999" y="-9999">
+    <style>
+		.button, .menu, .menuitem, .menuLabel, .menuitem-checkbox {
+		font-size: 12px;
+		font-family: 'YUGOTHM';
+		font-bold: true;
+		}
+		.menuHeader {
+		font-size: 16px;
+		font-family: 'YUGOTHM';
+		font-bold: true;
+		}
+    </style>
+</box>
