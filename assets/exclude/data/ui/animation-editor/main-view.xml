@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vbox width="100%" height="100%">
 	<import source="assets/exclude/data/ui/animation-editor/components/menubar.xml" />
+	<import source="assets/exclude/data/ui/animation-editor/components/styles.xml" />
     <!-- <vbox width="100%" height="100%" style="padding:10px;padding-top:15px;spacing:15px;"></vbox> -->
     <hbox>
         <button text="New Animation!" id="button1" style="color: red;" />
