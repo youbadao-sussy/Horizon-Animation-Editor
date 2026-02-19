@@ -1,5 +1,6 @@
 package funkin.ui.debug.animating;
 
+import funkin.backend.save.FunkinClient;
 import haxe.ui.Toolkit;
 import haxe.ui.backend.flixel.UIState;
 import haxe.ui.components.Button;
@@ -41,15 +42,19 @@ class AnimationEditorState extends VBox {
 
 	@:bind(help1, MouseEvent.CLICK)
 	private function onMyButton(e:MouseEvent) {
-		messageYee();
+		messageYee("about");
 	}
-	static function messageYee() {
+	static function messageYee(sysTxt:String) {
 		#if sys
-		var data = Yaml.read("assets/exclude/data/appData/main/about.yaml", Parser.options().useObjects());
+		var lang = Yaml.read("assets/exclude/data/appData/language/" + FunkinClient.language + ".yaml", Parser.options().useObjects());
 
-		Dialogs.messageBox(data.app + '\nVersion: ' + data.version + '\nPlatform: ' + data.platform + '\n' + '\nBuilt by: ' + data.created_by
-			+ '\nHaxeUI by: ' + data.haxeui + '\n\nNOTE: ' + data.description,
+		if (sysTxt == "about") {
+			var about = Yaml.read("assets/exclude/data/appData/main/about.yaml", Parser.options().useObjects());
+
+			Dialogs.messageBox(about.app + '\nVersion: ' + about.version + '\nPlatform: ' + about.platform + '\n' + '\nBuilt by: ' + about.created_by
+				+ '\nHaxeUI by: ' + about.haxeui + '\n\nNOTE: ' + lang.about_desc,
 			'About...', 'info');
+		}
 		#end
 	}
 }
