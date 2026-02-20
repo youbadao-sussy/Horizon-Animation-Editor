@@ -3,6 +3,8 @@ package funkin.ui.debug.animating.api.brnews;
 import funkin.ui.debug.animating.api.brnews.BreakingNewsData;
 import haxe.Http;
 import haxe.Json;
+import haxe.ui.containers.dialogs.CollapsibleDialog;
+import haxe.ui.containers.dialogs.Dialogs;
 import sys.io.File;
 
 class BreakingNews {
@@ -42,8 +44,8 @@ class BreakingNews {
             }
             */
             var jsonData:BreakingNewsData = Json.parse(data);
-            if (jsonData.news != "none") {
-                Dialogs.messageBox(jsonData.title+"\n"+jsonData.about+"\n"+jsonData.date+"\n"+jsonData.news, 'BREAKING NEWS!!!', 'info');
+			if (jsonData.news.text != "none") {
+				Dialogs.messageBox(jsonData.title + "\n" + jsonData.about + "\n" + jsonData.date + "\n" + jsonData.news.text, 'BREAKING NEWS!!!', 'info');
             } else {
                 #if WORKINGMODE
                     Dialogs.messageBox("Don't worry, it's working YEE", 'BREAKING NEWS!!!', 'info');
