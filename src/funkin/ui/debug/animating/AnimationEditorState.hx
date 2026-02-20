@@ -1,6 +1,7 @@
 package funkin.ui.debug.animating;
 
 import funkin.backend.save.FunkinClient;
+import funkin.ui.debug.animating.api.brnews.BreakingNewsData;
 import haxe.ui.Toolkit;
 import haxe.ui.backend.flixel.UIState;
 import haxe.ui.components.Button;
@@ -40,7 +41,12 @@ class AnimationEditorState extends VBox {
 		super();
 	}
 
-	@:bind(help1, MouseEvent.CLICK)
+	@:bind(breakingNews, MouseEvent.CLICK)
+	private function onBreakingNews(e:MouseEvent) {
+		messageYee("breakingNews");
+	}
+
+	@:bind(about, MouseEvent.CLICK)
 	private function onMyButton(e:MouseEvent) {
 		messageYee("about");
 	}
@@ -54,6 +60,9 @@ class AnimationEditorState extends VBox {
 			Dialogs.messageBox(about.app + '\nVersion: ' + about.version + '\nPlatform: ' + about.platform + '\n' + '\nBuilt by: ' + about.created_by
 				+ '\nHaxeUI by: ' + about.haxeui + '\n\nNOTE: ' + lang.about_desc,
 			'About...', 'info');
+		}
+		if (sysTxt == "breakingNews") {
+			BreakingNews.breakNewsMainT();
 		}
 		#end
 	}
