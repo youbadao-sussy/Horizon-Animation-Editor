@@ -1,7 +1,7 @@
 package funkin.ui.debug.animating;
 
 import funkin.backend.save.FunkinClient;
-import funkin.ui.debug.animating.api.brnews.BreakingNewsData;
+import funkin.ui.debug.animating.api.brnews.BreakingNews;
 import haxe.ui.Toolkit;
 import haxe.ui.backend.flixel.UIState;
 import haxe.ui.components.Button;
