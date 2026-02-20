@@ -1,6 +1,8 @@
 # YEAH its wip
 ![workflow](https://github.com/youbadao-sussy/Horizon-Animation-Editor/actions/workflows/main.yml/badge.svg)
 
+![releases](https://github.com/youbadao-sussy/Horizon-Animation-Editor/releases)
+
 ## lib using
 HaxeFlixel
 * flixel-addons
