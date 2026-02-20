@@ -1,0 +1,23 @@
+spr_id: My Sprite
+type: Sparrow # Sparrow, HorizonAtlas
+artist: Youbadao
+animator: Youbadao
+hsd_password:
+  needed: true
+  password: 12345678
+date: 2026-02-20
+time: 24:60:60 # hour:minute:second
+note: |
+  My Sprite Yee
+temp_char:
+  visible: true
+  char: Boyfriend # bf, dad, ActionHumaX
+config:
+  width: 100
+  height: 100
+  frame_rate: 24
+  anim: [idle, up, down, left, right]
+cntr:
+  idle:
+    key: space
+    loop: true

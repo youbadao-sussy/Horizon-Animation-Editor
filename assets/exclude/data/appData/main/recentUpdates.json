@@ -1,0 +1,28 @@
+{
+    "header": "Recent Updates",
+    "frontPage": [
+        {"name": "Version 1.0.0 Released", "date": "????-??-??", "version": "1.0.0"}
+    ],
+    "news": [
+        {
+            "name": "Version 1.0.0 Released",
+            "date": "????-??-??",
+            "version": "1.0.0",
+            "description": [
+                {"text": "We are excited to announce the release of Horizon Animation Editor version 1.0.0!"},
+                {"text": "This milestone marks the culmination of months of hard work and dedication."},
+                {"text": "The new version includes a revamped user interface, improved performance,"},
+                {"text": "and a host of new features designed to enhance your animation creation experience."},
+                {"text": "We can't wait for you to try it out and see the amazing animations you create with it!"}
+            ],
+            "new_features": [
+                {"text": "Revamped User Interface"},
+                {"text": "Improved Performance"},
+                {"text": "New Features"}
+            ],
+            "bug_fixes": [
+                {"text": "none. This is the first release."}
+            ]
+        }
+    ]
+}

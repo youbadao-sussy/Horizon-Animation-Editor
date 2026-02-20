@@ -1,0 +1,24 @@
+{
+    "credits": [
+        {
+            "header": "Horizon Animation Editor",
+            "body": [
+                {"text": "An animation Maker Created by Youbadao"},
+                {"text": "with OpenFL, Lime, HaxeUI and HaxeFlixel."}
+            ]
+        },
+        {
+            "header": "Main Creator",
+            "body": [
+                {"text": "Youbadao"}
+            ]
+        },
+        {
+            "header": "HaxeUI by",
+            "body": [
+                {"text": "Ian Harrigann"}
+            ]
+        }
+
+    ]
+}
