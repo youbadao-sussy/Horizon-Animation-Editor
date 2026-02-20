@@ -1,3 +1,17 @@
-
+# Haxelib
+.haxelib/
 # ビルド成果物を無視
+.DS_Store
 build/
+# Windowsの不要ファイル
+Thumbs.db
+desktop.ini
+# IDEの設定ファイル
+.idea/
+.vs/
+.swp
+.swo
+# OSの一時ファイル
+.Trashes
+.Spotlight-V100
+.fseventsd
