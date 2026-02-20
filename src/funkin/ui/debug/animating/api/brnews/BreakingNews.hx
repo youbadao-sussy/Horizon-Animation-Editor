@@ -8,7 +8,7 @@ import haxe.ui.containers.dialogs.Dialogs;
 import sys.io.File;
 
 class BreakingNews {
-    static function breakNewsMainT() {
+	public static function breakNewsMainT() {
         // 取得したい GitHub リポジトリの情報
         var owner = "youbadao-sussy"; // リポジトリ所有者
         var repo = "Horizon-Animation-Editor"; // リポジトリ名
