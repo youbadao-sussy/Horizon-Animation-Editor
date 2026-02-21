@@ -1,7 +1,7 @@
 package funkin.ui.debug.animating.api.brnews;
 
+import funkin.ui.debug.animating.api.brnews.BreakingNewsData.BreakingText;
 import funkin.ui.debug.animating.api.brnews.BreakingNewsData;
-import funkin.ui.debug.animating.api.brnews.BreakingText;
 import haxe.Http;
 import haxe.Json;
 import haxe.ui.containers.dialogs.CollapsibleDialog;
