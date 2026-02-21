@@ -48,7 +48,7 @@ class BreakingNews {
             */
             var jsonData:BreakingNewsData = Json.parse(data);
 			jsonText = Json.parse(data.news);
-			if (jsonData.news.text != "none") {
+			if (jsonText != "none") {
 				Dialogs.messageBox(jsonData.title + "\n" + jsonData.about + "\n" + jsonData.date + "\n" + jsonText, 'BREAKING NEWS!!!', 'info');
             } else {
                 #if WORKINGMODE
