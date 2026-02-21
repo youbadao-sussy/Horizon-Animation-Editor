@@ -47,7 +47,7 @@ class BreakingNews {
             }
             */
             var jsonData:BreakingNewsData = Json.parse(data);
-			jsonText = Json.parse(data.news);
+			jsonText = Json.parse(data);
 			if (jsonText != "none") {
 				Dialogs.messageBox(jsonData.title + "\n" + jsonData.about + "\n" + jsonData.date + "\n" + jsonText, 'BREAKING NEWS!!!', 'info');
             } else {
