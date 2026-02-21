@@ -1,6 +1,7 @@
 package funkin.ui.debug.animating.api.brnews;
 
 import funkin.ui.debug.animating.api.brnews.BreakingNewsData;
+import funkin.ui.debug.animating.api.brnews.BreakingText;
 import haxe.Http;
 import haxe.Json;
 import haxe.ui.containers.dialogs.CollapsibleDialog;
@@ -9,6 +10,8 @@ import sys.io.File;
 
 class BreakingNews {
 	public static function breakNewsMainT() {
+		var jsonText:Array<BreakingText>;
+
         // 取得したい GitHub リポジトリの情報
         var owner = "youbadao-sussy"; // リポジトリ所有者
         var repo = "Horizon-Animation-Editor"; // リポジトリ名
@@ -25,7 +28,7 @@ class BreakingNews {
         // 必要に応じて GitHub トークンを設定（非公開リポジトリの場合）
         // http.setHeader("Authorization", "token YOUR_GITHUB_TOKEN");
 
-        http.onData = function(data:String) {
+		http.onData = function(data:Dynamic) {
             /*
             try {
                 // JSON をパース
@@ -44,8 +47,9 @@ class BreakingNews {
             }
             */
             var jsonData:BreakingNewsData = Json.parse(data);
+			jsonText = Json.parse(data.news);
 			if (jsonData.news.text != "none") {
-				Dialogs.messageBox(jsonData.title + "\n" + jsonData.about + "\n" + jsonData.date + "\n" + jsonData.news.text, 'BREAKING NEWS!!!', 'info');
+				Dialogs.messageBox(jsonData.title + "\n" + jsonData.about + "\n" + jsonData.date + "\n" + jsonText, 'BREAKING NEWS!!!', 'info');
             } else {
                 #if WORKINGMODE
                     Dialogs.messageBox("Don't worry, it's working YEE", 'BREAKING NEWS!!!', 'info');
